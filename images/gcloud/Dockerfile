@@ -40,6 +40,7 @@ RUN curl -L https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd
     && chmod +x /tmp/dep \
     && mv /tmp/dep /usr/local/bin/dep
 RUN go get -v golang.org/x/tools/cmd/goimports
+RUN go get -v github.com/mikefarah/yq
 
 WORKDIR /workspace
 ADD runner /
